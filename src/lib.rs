@@ -70,7 +70,7 @@ extern "C" fn on_message_complete(parser: *mut http_parser) -> libc::c_int {
     0
 }
 
-#[link(name = "http-parser")]
+#[link(name = "http_parser")]
 extern {
     fn http_parser_init(
         parser: *mut http_parser,
