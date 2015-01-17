@@ -1,0 +1,5 @@
+[package]
+
+name = "rust_http_parser"
+version = "0.0.1"
+authors = ["Dominik Prien <dprien@users.noreply.github.com>"]
