@@ -18,22 +18,9 @@ enum http_parser_type
 #[repr(C)]
 struct http_parser {
     /** PRIVATE **/
-    _type: libc::c_uint,
-    _flags: libc::c_uint,
-    _state: libc::c_uint,
-    _header_state: libc::c_uint,
-    _index: libc::c_uint,
 
-    _nread: libc::uint32_t,
-    _content_length: libc::uint64_t,
-
-    _http_major: libc::c_ushort,
-    _http_minor: libc::c_ushort,
-    _status_code: libc::c_uint,
-    _method: libc::c_uint,
-    _http_errno: libc::c_uint,
-
-    _upgrade: libc::c_uint,
+    // Ignoring all non-public fields (28 bytes)
+    _private: [libc::uint32_t; 7],
 
     /** PUBLIC **/
     data: *mut libc::c_void,
